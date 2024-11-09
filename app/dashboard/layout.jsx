@@ -1,11 +1,12 @@
 import { UserButton } from '@clerk/nextjs'
 import React from 'react'
+import Header from './_components/Header'
 
-function DashboardLayout() {
+function DashboardLayout({ children }) {
     return (
         <div>
-            DashboardLayout
-            <UserButton />
+            <Header />
+            {children}
         </div>
     )
 }
