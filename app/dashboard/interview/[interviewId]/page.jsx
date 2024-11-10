@@ -8,6 +8,7 @@ import { Lightbulb, WebcamIcon } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import Webcam from 'react-webcam';
 import dotenv from "dotenv";
+import Link from 'next/link';
 
 function Interview({ params }) {
     dotenv.config({ path: ".env.local" });
@@ -33,7 +34,7 @@ function Interview({ params }) {
                 <div className='flex flex-col my-5 gap-5'>
                     <div className='flex flex-col p-5 rounded-lg border'>
                         <h2 className='text-lg'><strong>Job Position/Job Role: </strong>{interviewData?.jobPosition}</h2>
-                        <h2 className='text-lg'><strong>Job Position/Job Role: </strong>{interviewData?.jobPosition}</h2>
+                        <h2 className='text-lg'><strong>Job Description/Tech Stack: </strong>{interviewData?.jobDesc}</h2>
                         <h2 className='text-lg'><strong>Years of Experience: </strong>{interviewData?.jobExperience}</h2>
                     </div>
 
@@ -62,7 +63,9 @@ function Interview({ params }) {
             </div>
 
             <div className='flex justify-end items-end'>
-                <Button className='my-10'>Start Interview</Button>
+                <Link href={`/dashboard/interview/${params.interviewId}/start`}>
+                    <Button className='my-10'>Start Interview</Button>
+                </Link>
             </div>
         </div>
     )
