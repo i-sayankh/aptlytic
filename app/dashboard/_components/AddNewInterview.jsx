@@ -20,6 +20,7 @@ import { MockInterview } from '@/utils/schema';
 import { v4 as uuidv4 } from 'uuid';
 import { useUser } from '@clerk/nextjs';
 import moment from 'moment';
+import { useRouter } from 'next/navigation';
 
 function AddNewInterview() {
     const [openDialog, setOpenDialog] = useState(false);
@@ -28,6 +29,7 @@ function AddNewInterview() {
     const [jobExperience, setJobExperience] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [mockResponse, setMockResponse] = useState([]);
+    const router = useRouter();
     const { user } = useUser();
 
     dotenv.config({ path: ".env.local" });
@@ -42,7 +44,7 @@ function AddNewInterview() {
 
         const result = await chatSession.sendMessage(InputPrompt);
         const mockJSONResponse = (result.response.text()).replace('```json', '').replace('```', '');
-        console.log(JSON.parse(mockJSONResponse));
+        // console.log(JSON.parse(mockJSONResponse));
         setMockResponse(mockJSONResponse);
 
         if (mockJSONResponse) {
@@ -56,7 +58,10 @@ function AddNewInterview() {
                 createdAt: moment().format('DD-MM-YYYY'),
             }).returning({ mockId: MockInterview.mockId });
 
-            console.log("response", response);
+            if (response) {
+                setOpenDialog(false);
+                router.push(`/dashboard/interview/${response[0].mockId}`);
+            }
         } else {
             console.log("No response");
         }
