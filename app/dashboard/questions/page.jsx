@@ -5,7 +5,8 @@ import FAQ from '../_data/FAQ'
 function Questions() {
     return (
         <div className='p-10'>
-            <div className="space-y-4">
+            <h2 className='font-bold text-2xl'>Frquently Asked Questions</h2>
+            <div className="space-y-4 mt-5">
                 {FAQ.map((item, index) => (
                     <details className="group [&_summary::-webkit-details-marker]:hidden">
                         <summary

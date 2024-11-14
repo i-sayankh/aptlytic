@@ -1,13 +1,13 @@
 export default [
     {
-        link: 'https://buy.stripe.com/test_cN25nY8UL5At9xe288',
+        link: 'https://buy.stripe.com/test_14k9DZ0c87OG3Uk000',
         price: 199,
         priceId: 'price_1QKmdQSGnAub7EgPccDBcUe7',
         name: 'Basic Plan',
         description: 'New users looking to expand their experience with limited premium access at an affordable rate.',
     },
     {
-        link: 'https://buy.stripe.com/test_9AQbMm5Izgf7gZG6op',
+        link: 'https://buy.stripe.com/test_aEU03p1gcglcduUcMN',
         price: 499,
         priceId: 'price_1QKy2lSGnAub7EgPiywdETsl',
         name: 'Pro Plan',
@@ -15,7 +15,7 @@ export default [
 
     },
     {
-        link: 'https://buy.stripe.com/test_5kAaIi3Ar6Ex4cUcMO',
+        link: 'https://buy.stripe.com/test_aEU03p1gcglcduUcMN',
         price: 999,
         priceId: 'price_1QKyQzSGnAub7EgP5muCFdYA',
         name: 'Elite Plan',
