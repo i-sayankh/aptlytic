@@ -19,7 +19,7 @@ function Header() {
                 </li>
                 <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
                     ${path === '/dashboard/questions' ? 'font-bold text-primary' : ''}`}>
-                    Questions
+                    <Link href="/dashboard/questions">Questions</Link>
                 </li>
                 <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
                     ${path === '/dashboard/upgrade' ? 'font-bold text-primary' : ''}`}>
