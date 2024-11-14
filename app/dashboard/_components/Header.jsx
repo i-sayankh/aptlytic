@@ -2,6 +2,7 @@
 
 import { UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
@@ -19,10 +20,12 @@ function Header() {
                 <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
                     ${path === '/dashboard/questions' ? 'font-bold text-primary' : ''}`}>
                     Questions
-                </li><li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
+                </li>
+                <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
                     ${path === '/dashboard/upgrade' ? 'font-bold text-primary' : ''}`}>
-                    Upgrade
-                </li><li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
+                    <Link href="/dashboard/upgrade">Upgrade</Link>
+                </li>
+                <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
                     ${path === '/dashboard/how-it-works' ? 'font-bold text-primary' : ''}`}>
                     How it Works?
                 </li>
