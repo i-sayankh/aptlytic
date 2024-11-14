@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Aptlytic - AI-Powered Mock Interview Platform
+
+![Aptlytic Logo](./screenshots/logo.png)
+
+Aptlytic is an innovative AI-powered platform built to help users prepare for job interviews through simulated, AI-driven mock interviews. By combining advanced AI with detailed feedback, Aptlytic offers a comprehensive and interactive experience for users looking to sharpen their interview skills.
+
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Subscription Plans](#subscription-plans)
+- [Screenshots](#screenshots)
+- [FAQ](#faq)
+- [License](#license)
+
+---
+
+## Features
+- **AI-Driven Interview Simulation** using Gemini AI
+- **User Authentication** with Clerk
+- **Question Management** powered by Drizzle ORM
+- **Real-Time Feedback** and rating system
+- **Performance Analysis** with detailed feedback for each answer
+- **Subscription Tiers** for premium features and insights
+
+## Tech Stack
+- **Framework**: Next.js
+- **Frontend**: React, Tailwind CSS
+- **ORM**: Drizzle ORM
+- **AI Integration**: Gemini AI
+- **Authentication**: Clerk
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- [Node.js](https://nodejs.org/) v14 or above
+- [NPM](https://www.npmjs.com/) v6 or above
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/i-sayankh/aptlytic.git
+cd aptlytic
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Set up environment variables:
+
+1. Create a `.env.local` file in the root directory.
+2. Configure your environment variables as follows:
+
+```plaintext
+NEXT_PUBLIC_API_KEY=your-gemini-ai-api-key
+CLERK_FRONTEND_API=your-clerk-frontend-api
+DRIZZLE_DATABASE_URL=your-database-url
+```
+
+### Run the Application
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be running at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Register / Login**: Sign in with Clerk authentication.
+2. **Start Mock Interview**: Access various question sets.
+3. **Real-Time Feedback**: Receive immediate AI-generated feedback and insights on your performance.
+4. **Upgrade for More**: Choose a subscription plan to unlock detailed analytics.
 
-## Learn More
+## Subscription Plans
 
-To learn more about Next.js, take a look at the following resources:
+- **Basic**: For new users - ₹199/month.
+- **Pro**: Advanced analytics, personalized feedback - ₹499/month.
+- **Enterprise**: Unlimited access and priority support - ₹999/month.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Landing Page](./screenshots/landing.png) <!-- Add your actual screenshot paths -->
+![Mock Interview](./screenshots/dashboard.png)
+![Feedback Section](./screenshots/feedback.png)
 
-## Deploy on Vercel
+## FAQ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**How can I start a mock interview?**  
+Sign in, navigate to the Dashboard, and select "Start Interview."
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**How is my performance evaluated?**  
+Our platform uses Gemini AI for real-time analysis and Drizzle ORM to manage the interview feedback and ratings.
+
+**Can I get a refund?**  
+For refund-related queries, please contact our support team at support@aptlytic.com.
+
+## License
+This project is licensed under the MIT License.
